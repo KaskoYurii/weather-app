@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+        PUBLIC_PATH: ${{ vars.VITE_PUBLIC_PATH }}
 
     steps:
       - name: Checkout repo
